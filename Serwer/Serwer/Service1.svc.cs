@@ -12,6 +12,9 @@ namespace Serwer
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        Model1 Baza = new Model1();
+        Zwierzaki Zwierze = new Zwierzaki();
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
