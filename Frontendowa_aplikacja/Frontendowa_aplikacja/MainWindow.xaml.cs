@@ -23,6 +23,8 @@ namespace Frontendowa_aplikacja
         public MainWindow()
         {
             InitializeComponent();
+            var serwer = new ServiceReference1.Service1Client();
+            ramka.Content = serwer.zwroc_imie(1);
         }
     }
 }

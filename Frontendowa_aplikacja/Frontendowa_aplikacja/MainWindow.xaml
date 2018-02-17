@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Label Content="tak" HorizontalAlignment="Left" Height="138" Margin="191,46,0,0" VerticalAlignment="Top" Width="143"/>
+        <Label x:Name="ramka" Content="tak" HorizontalAlignment="Left" Height="138" Margin="191,46,0,0" VerticalAlignment="Top" Width="143"/>
 
     </Grid>
 </Window>
