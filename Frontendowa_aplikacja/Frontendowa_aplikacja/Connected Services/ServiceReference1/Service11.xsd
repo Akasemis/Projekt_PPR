@@ -1,17 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:56362/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Serwer" />
-  <xs:element name="GetData">
+  <xs:element name="wczytaj_id">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="value" type="xs:int" />
+        <xs:element minOccurs="0" name="var" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetDataResponse">
+  <xs:element name="wczytaj_idResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wczytaj_idResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_imie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_imieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_imieResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_rase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_raseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_raseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_wiek">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_wiekResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_wiekResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_kontakt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_kontaktResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_kontaktResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_zdj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_zdjResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_zdjResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

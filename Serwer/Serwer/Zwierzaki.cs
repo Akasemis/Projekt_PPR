@@ -36,7 +36,6 @@ namespace Serwer
             this.wiek = wiek;
             this.kontakt = kontakt;
             this.zdj = zdj;
-
         }
     }
 }

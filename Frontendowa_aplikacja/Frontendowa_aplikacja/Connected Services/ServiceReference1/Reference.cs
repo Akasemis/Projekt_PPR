@@ -78,11 +78,41 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/wczytaj_id", ReplyAction="http://tempuri.org/IService1/wczytaj_idResponse")]
+        int wczytaj_id(int var);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/wczytaj_id", ReplyAction="http://tempuri.org/IService1/wczytaj_idResponse")]
+        System.Threading.Tasks.Task<int> wczytaj_idAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_imie", ReplyAction="http://tempuri.org/IService1/zwroc_imieResponse")]
+        string zwroc_imie(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_imie", ReplyAction="http://tempuri.org/IService1/zwroc_imieResponse")]
+        System.Threading.Tasks.Task<string> zwroc_imieAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_rase", ReplyAction="http://tempuri.org/IService1/zwroc_raseResponse")]
+        string zwroc_rase(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_rase", ReplyAction="http://tempuri.org/IService1/zwroc_raseResponse")]
+        System.Threading.Tasks.Task<string> zwroc_raseAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_wiek", ReplyAction="http://tempuri.org/IService1/zwroc_wiekResponse")]
+        System.Nullable<int> zwroc_wiek(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_wiek", ReplyAction="http://tempuri.org/IService1/zwroc_wiekResponse")]
+        System.Threading.Tasks.Task<System.Nullable<int>> zwroc_wiekAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_kontakt", ReplyAction="http://tempuri.org/IService1/zwroc_kontaktResponse")]
+        string zwroc_kontakt(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_kontakt", ReplyAction="http://tempuri.org/IService1/zwroc_kontaktResponse")]
+        System.Threading.Tasks.Task<string> zwroc_kontaktAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_zdj", ReplyAction="http://tempuri.org/IService1/zwroc_zdjResponse")]
+        string zwroc_zdj(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_zdj", ReplyAction="http://tempuri.org/IService1/zwroc_zdjResponse")]
+        System.Threading.Tasks.Task<string> zwroc_zdjAsync(int var);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite);
@@ -118,12 +148,52 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public int wczytaj_id(int var) {
+            return base.Channel.wczytaj_id(var);
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<int> wczytaj_idAsync(int var) {
+            return base.Channel.wczytaj_idAsync(var);
+        }
+        
+        public string zwroc_imie(int var) {
+            return base.Channel.zwroc_imie(var);
+        }
+        
+        public System.Threading.Tasks.Task<string> zwroc_imieAsync(int var) {
+            return base.Channel.zwroc_imieAsync(var);
+        }
+        
+        public string zwroc_rase(int var) {
+            return base.Channel.zwroc_rase(var);
+        }
+        
+        public System.Threading.Tasks.Task<string> zwroc_raseAsync(int var) {
+            return base.Channel.zwroc_raseAsync(var);
+        }
+        
+        public System.Nullable<int> zwroc_wiek(int var) {
+            return base.Channel.zwroc_wiek(var);
+        }
+        
+        public System.Threading.Tasks.Task<System.Nullable<int>> zwroc_wiekAsync(int var) {
+            return base.Channel.zwroc_wiekAsync(var);
+        }
+        
+        public string zwroc_kontakt(int var) {
+            return base.Channel.zwroc_kontakt(var);
+        }
+        
+        public System.Threading.Tasks.Task<string> zwroc_kontaktAsync(int var) {
+            return base.Channel.zwroc_kontaktAsync(var);
+        }
+        
+        public string zwroc_zdj(int var) {
+            return base.Channel.zwroc_zdj(var);
+        }
+        
+        public System.Threading.Tasks.Task<string> zwroc_zdjAsync(int var) {
+            return base.Channel.zwroc_zdjAsync(var);
         }
         
         public Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite) {

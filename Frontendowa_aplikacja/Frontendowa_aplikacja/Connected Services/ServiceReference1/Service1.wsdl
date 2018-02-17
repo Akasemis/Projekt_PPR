@@ -7,11 +7,41 @@
       <xsd:import schemaLocation="http://localhost:56362/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Serwer" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="IService1_wczytaj_id_InputMessage">
+    <wsdl:part name="parameters" element="tns:wczytaj_id" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="IService1_wczytaj_id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:wczytaj_idResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_imie_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_imie" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_imie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_imieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_rase_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_rase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_rase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_raseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_wiek_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_wiek" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_wiek_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_wiekResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_kontakt_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_kontakt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_kontakt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_kontaktResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_zdj_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_zdj" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_zdj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_zdjResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
@@ -20,9 +50,29 @@
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    <wsdl:operation name="wczytaj_id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/wczytaj_id" message="tns:IService1_wczytaj_id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/wczytaj_idResponse" message="tns:IService1_wczytaj_id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_imie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_imie" message="tns:IService1_zwroc_imie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_imieResponse" message="tns:IService1_zwroc_imie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_rase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_rase" message="tns:IService1_zwroc_rase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_raseResponse" message="tns:IService1_zwroc_rase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_wiek">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_wiek" message="tns:IService1_zwroc_wiek_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_wiekResponse" message="tns:IService1_zwroc_wiek_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_kontakt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_kontakt" message="tns:IService1_zwroc_kontakt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_kontaktResponse" message="tns:IService1_zwroc_kontakt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_zdj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_zdj" message="tns:IService1_zwroc_zdj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_zdjResponse" message="tns:IService1_zwroc_zdj_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -31,8 +81,53 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+    <wsdl:operation name="wczytaj_id">
+      <soap:operation soapAction="http://tempuri.org/IService1/wczytaj_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_imie">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_imie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_rase">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_rase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_wiek">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_wiek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_kontakt">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_kontakt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_zdj">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_zdj" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

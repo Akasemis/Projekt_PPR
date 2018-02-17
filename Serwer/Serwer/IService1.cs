@@ -12,8 +12,20 @@ namespace Serwer
     [ServiceContract]
     public interface IService1
     {
-
         [OperationContract]
+        int wczytaj_id(int var);
+        [OperationContract]
+        string zwroc_imie(int var);
+        [OperationContract]
+        string zwroc_rase(int var);
+        [OperationContract]
+        int? zwroc_wiek(int var);
+        [OperationContract]
+        string zwroc_kontakt(int var);
+        [OperationContract]
+        string zwroc_zdj(int var);
+
+
         string GetData(int value);
 
         [OperationContract]

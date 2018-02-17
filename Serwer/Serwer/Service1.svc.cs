@@ -46,11 +46,12 @@ namespace Serwer
             Zwierze = Baza.Zwierzaki.Find(var);
             return Zwierze.zdj;
         }
-        public void dodaj_zwierzaka(int id, string imie, string rasa, int? wiek, string kontakt, string zdj)
+        public int dodaj_zwierzaka(int id, string imie, string rasa, int? wiek, string kontakt, string zdj)
         {
             Zwierze.nowy_zwierzak(id, imie, rasa, wiek, kontakt, zdj);
             Baza.Zwierzaki.Add(Zwierze);
             Baza.SaveChanges();
+            return 1;
         }
 
 
