@@ -9,6 +9,8 @@ namespace Serwer
     [Table("Zwierzaki")]
     public partial class Zwierzaki
     {
+
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
@@ -25,5 +27,16 @@ namespace Serwer
 
         [StringLength(50)]
         public string zdj { get; set; }
+
+        public void nowy_zwierzak(int id, string imie, string rasa, int? wiek, string kontakt, string zdj)
+        {
+            this.id = id;
+            this.imie = imie;
+            this.rasa = rasa;
+            this.wiek = wiek;
+            this.kontakt = kontakt;
+            this.zdj = zdj;
+
+        }
     }
 }

@@ -14,11 +14,15 @@ namespace Serwer
     {
         Model1 Baza = new Model1();
         Zwierzaki Zwierze = new Zwierzaki();
-
+        public int wczytaj_id(int var)
+        {
+            Zwierze = Baza.Zwierzaki.Find(var);
+            return Zwierze.id;
+        }
         public string zwroc_imie(int var)
         {
             Zwierze = Baza.Zwierzaki.Find(var);
-            return Zwierze.Imie;
+            return Zwierze.imie;
         }
 
         public string zwroc_rase(int var)
@@ -42,6 +46,13 @@ namespace Serwer
             Zwierze = Baza.Zwierzaki.Find(var);
             return Zwierze.zdj;
         }
+        public void dodaj_zwierzaka(int id, string imie, string rasa, int? wiek, string kontakt, string zdj)
+        {
+            Zwierze.nowy_zwierzak(id, imie, rasa, wiek, kontakt, zdj);
+            Baza.Zwierzaki.Add(Zwierze);
+            Baza.SaveChanges();
+        }
+
 
 
         public string GetData(int value)
