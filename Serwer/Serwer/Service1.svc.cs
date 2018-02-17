@@ -15,6 +15,35 @@ namespace Serwer
         Model1 Baza = new Model1();
         Zwierzaki Zwierze = new Zwierzaki();
 
+        public string zwroc_imie(int var)
+        {
+            Zwierze = Baza.Zwierzaki.Find(var);
+            return Zwierze.Imie;
+        }
+
+        public string zwroc_rase(int var)
+        {
+            Zwierze = Baza.Zwierzaki.Find(var);
+            return Zwierze.rasa;
+        }
+        public int? zwroc_wiek(int var)
+        {
+            Zwierze = Baza.Zwierzaki.Find(var);
+            return Zwierze.wiek;
+        }
+
+        public string zwroc_kontakt(int var)
+        {
+            Zwierze = Baza.Zwierzaki.Find(var);
+            return Zwierze.kontakt;
+        }
+        public string zwroc_zdj(int var)
+        {
+            Zwierze = Baza.Zwierzaki.Find(var);
+            return Zwierze.zdj;
+        }
+
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
