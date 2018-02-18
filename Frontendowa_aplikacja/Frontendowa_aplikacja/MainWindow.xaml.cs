@@ -29,6 +29,8 @@ namespace Frontendowa_aplikacja
             rasa_t.Content = serwer.zwroc_rase(1);
             wiek_t.Content = Convert.ToString(serwer.zwroc_wiek(1));
             kontakt_t.Content = serwer.zwroc_kontakt(1);
+            var uriSource = new Uri("zdj/1.jpg", UriKind.Relative);
+            img.Source = new BitmapImage(uriSource);
         }
 
         private void zwierzak_next(object sender, RoutedEventArgs e)
@@ -42,6 +44,8 @@ namespace Frontendowa_aplikacja
                 rasa_t.Content = serwer.zwroc_rase(stan);
                 wiek_t.Content = Convert.ToString(serwer.zwroc_wiek(stan));
                 kontakt_t.Content = serwer.zwroc_kontakt(stan);
+                var uriSource = new Uri("zdj/" + serwer.zwroc_zdj(stan), UriKind.Relative);
+                img.Source = new BitmapImage(uriSource);
             }
             else
             {
@@ -50,6 +54,8 @@ namespace Frontendowa_aplikacja
                 rasa_t.Content = serwer.zwroc_rase(stan);
                 wiek_t.Content = Convert.ToString(serwer.zwroc_wiek(stan));
                 kontakt_t.Content = serwer.zwroc_kontakt(stan);
+                var uriSource = new Uri("zdj/" + serwer.zwroc_zdj(stan), UriKind.Relative);
+                img.Source = new BitmapImage(uriSource);
             }
         }
 
@@ -64,6 +70,8 @@ namespace Frontendowa_aplikacja
                 rasa_t.Content = serwer.zwroc_rase(stan);
                 wiek_t.Content = Convert.ToString(serwer.zwroc_wiek(stan));
                 kontakt_t.Content = serwer.zwroc_kontakt(stan);
+                var uriSource = new Uri("zdj/" + serwer.zwroc_zdj(stan), UriKind.Relative);
+                img.Source = new BitmapImage(uriSource);
             }
             else
             {
@@ -72,6 +80,8 @@ namespace Frontendowa_aplikacja
                 rasa_t.Content = serwer.zwroc_rase(stan);
                 wiek_t.Content = Convert.ToString(serwer.zwroc_wiek(stan));
                 kontakt_t.Content = serwer.zwroc_kontakt(stan);
+                var uriSource = new Uri("zdj/" + serwer.zwroc_zdj(stan), UriKind.Relative);
+                img.Source = new BitmapImage(uriSource);
             }
         }
     }

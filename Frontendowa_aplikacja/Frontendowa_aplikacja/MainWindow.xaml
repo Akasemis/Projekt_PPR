@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontendowa_aplikacja"
         mc:Ignorable="d"
-        Title="MainWindow" Height="472.061" Width="702.743">
+        Title="MainWindow" Height="472.061" Width="700">
     <Grid Margin="0,0,21.4,-0.2">
-        <Label x:Name="imie" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="216,160,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right"/>
-        <Label x:Name="rasa" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="216,205,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right"/>
-        <Label x:Name="wiek" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="216,245,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right"/>
-        <Label x:Name="kontakt" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="216,285,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right"/>
-        <Button x:Name="Button_next" Content="Następny" HorizontalAlignment="Left" Height="34" Margin="550,219,0,0" VerticalAlignment="Top" Width="115" Click="zwierzak_next"/>
-        <Button x:Name="Button_prev" Content="Poprzedni" HorizontalAlignment="Left" Height="34" Margin="35,219,0,0" VerticalAlignment="Top" Width="115" Click="zwierzak_prev"/>
-        <Label x:Name="imie_t" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="287,160,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="rasa_t" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="287,205,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="wiek_t" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="287,245,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="kontakt_t" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="287,285,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="imie" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="258,201,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
+        <Label x:Name="rasa" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="258,246,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
+        <Label x:Name="wiek" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="258,286,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
+        <Label x:Name="kontakt" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="258,326,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
+        <Button x:Name="Button_next" Content="Następny" HorizontalAlignment="Left" Height="34" Margin="547,219,0,0" VerticalAlignment="Top" Width="115" Click="zwierzak_next"/>
+        <Button x:Name="Button_prev" Content="Poprzedni" Height="34" Margin="35,219,0,0" VerticalAlignment="Top" Click="zwierzak_prev" HorizontalAlignment="Left" Width="115"/>
+        <Label x:Name="imie_t" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="329,201,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
+        <Label x:Name="rasa_t" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="329,246,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
+        <Label x:Name="wiek_t" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="329,286,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
+        <Label x:Name="kontakt_t" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="329,326,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
+        <Image x:Name="img" HorizontalAlignment="Left" Height="152" Margin="258,24,0,0" VerticalAlignment="Top" Width="169" Source="zdj/1.jpg"/>
     </Grid>
 </Window>

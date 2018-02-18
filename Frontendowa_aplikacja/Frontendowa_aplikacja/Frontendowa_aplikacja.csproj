@@ -134,5 +134,10 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="zdj\1.jpg" />
+    <Resource Include="zdj\2.jpg" />
+    <Resource Include="zdj\3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
