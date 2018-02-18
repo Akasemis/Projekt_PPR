@@ -26,8 +26,8 @@ namespace Serwer
         string zwroc_kontakt(int var);
         [OperationContract]
         string zwroc_zdj(int var);
-
-
+        [OperationContract]
+        int dodaj_zwierzaka(int id, string imie, string rasa, int? wiek, string kontakt, string zdj);
         string GetData(int value);
 
         [OperationContract]

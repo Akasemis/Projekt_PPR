@@ -84,5 +84,11 @@ namespace Frontendowa_aplikacja
                 img.Source = new BitmapImage(uriSource);
             }
         }
+
+        private void dodawanie_Click(object sender, RoutedEventArgs e)
+        {
+            dodawanie dodawanie = new dodawanie();
+            dodawanie.Show();
+        }
     }
 }

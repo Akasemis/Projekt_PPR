@@ -120,6 +120,12 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_zdj", ReplyAction="http://tempuri.org/IService1/zwroc_zdjResponse")]
         System.Threading.Tasks.Task<string> zwroc_zdjAsync(int var);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/dodaj_zwierzaka", ReplyAction="http://tempuri.org/IService1/dodaj_zwierzakaResponse")]
+        int dodaj_zwierzaka(int id, string imie, string rasa, System.Nullable<int> wiek, string kontakt, string zdj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/dodaj_zwierzaka", ReplyAction="http://tempuri.org/IService1/dodaj_zwierzakaResponse")]
+        System.Threading.Tasks.Task<int> dodaj_zwierzakaAsync(int id, string imie, string rasa, System.Nullable<int> wiek, string kontakt, string zdj);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite);
         
@@ -208,6 +214,14 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> zwroc_zdjAsync(int var) {
             return base.Channel.zwroc_zdjAsync(var);
+        }
+        
+        public int dodaj_zwierzaka(int id, string imie, string rasa, System.Nullable<int> wiek, string kontakt, string zdj) {
+            return base.Channel.dodaj_zwierzaka(id, imie, rasa, wiek, kontakt, zdj);
+        }
+        
+        public System.Threading.Tasks.Task<int> dodaj_zwierzakaAsync(int id, string imie, string rasa, System.Nullable<int> wiek, string kontakt, string zdj) {
+            return base.Channel.dodaj_zwierzakaAsync(id, imie, rasa, wiek, kontakt, zdj);
         }
         
         public Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite) {

@@ -18,5 +18,6 @@
         <Label x:Name="wiek_t" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="329,286,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
         <Label x:Name="kontakt_t" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="329,326,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
         <Image x:Name="img" HorizontalAlignment="Left" Height="152" Margin="258,24,0,0" VerticalAlignment="Top" Width="169" Source="zdj/1.jpg"/>
+        <Button x:Name="dodawanie" Content="Dodaj nowe zwierzę" HorizontalAlignment="Left" Margin="547,42,0,0" VerticalAlignment="Top" Width="115" Height="68" Click="dodawanie_Click"/>
     </Grid>
 </Window>
