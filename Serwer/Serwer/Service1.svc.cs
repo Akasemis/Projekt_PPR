@@ -58,7 +58,7 @@ namespace Serwer
             Zwierze.nowy_zwierzak(id, imie, rasa, wiek, kontakt, zdj);
             Baza.Zwierzaki.Add(Zwierze);
             Baza.SaveChanges();
-            return 1;
+            return 0;
         }
 
 
