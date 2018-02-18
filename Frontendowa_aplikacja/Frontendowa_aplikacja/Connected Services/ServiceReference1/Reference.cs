@@ -78,6 +78,12 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ile_wierszy", ReplyAction="http://tempuri.org/IService1/ile_wierszyResponse")]
+        int ile_wierszy();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ile_wierszy", ReplyAction="http://tempuri.org/IService1/ile_wierszyResponse")]
+        System.Threading.Tasks.Task<int> ile_wierszyAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/wczytaj_id", ReplyAction="http://tempuri.org/IService1/wczytaj_idResponse")]
         int wczytaj_id(int var);
         
@@ -146,6 +152,14 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public int ile_wierszy() {
+            return base.Channel.ile_wierszy();
+        }
+        
+        public System.Threading.Tasks.Task<int> ile_wierszyAsync() {
+            return base.Channel.ile_wierszyAsync();
         }
         
         public int wczytaj_id(int var) {

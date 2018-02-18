@@ -24,7 +24,11 @@ namespace Frontendowa_aplikacja
         {
             InitializeComponent();
             var serwer = new ServiceReference1.Service1Client();
-            ramka.Content = serwer.zwroc_imie(1);
+            ile.Content = serwer.ile_wierszy();
+            imie.Content += serwer.zwroc_imie(1);
+            rasa.Content += serwer.zwroc_rase(1);
+            wiek.Content += Convert.ToString(serwer.zwroc_wiek(1));
+            kontakt.Content += serwer.zwroc_kontakt(1);
         }
     }
 }

@@ -13,6 +13,8 @@ namespace Serwer
     public interface IService1
     {
         [OperationContract]
+        int ile_wierszy();
+        [OperationContract]
         int wczytaj_id(int var);
         [OperationContract]
         string zwroc_imie(int var);
